@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark position-fixed w-100 ps-2 pe-2">
+  <div class="ps-1 pe-2"><i class="bi bi-clipboard2-minus text-white dx-font-m"></i>
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="toggleHamburger()"
+    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" [attr.aria-expanded]="isExpanded"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon dx-font-s"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{ show: isExpanded }">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" (click)="scrollTo('monthlyLayoffs')">Monthly layoffs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="scrollTo('timeLayoffs')">Layoffs through time</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="scrollTo('companyLayoffs')">Compare company layoffs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link d-flex align-items-center" [routerLink]="['/map']">Map <i class="dx-icon-map ps-1"></i></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="mb-5 pb-5"></div>
+
+<app-heatmap-chart id="monthlyLayoffs"></app-heatmap-chart>
+<app-line-chart id="timeLayoffs"></app-line-chart>
+<app-bar-chart id="companyLayoffs"></app-bar-chart>

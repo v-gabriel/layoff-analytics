@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark position-fixed w-100 ps-2 pe-2">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent"
+    class="justify-content-between d-flex align-items-center w-100">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a [routerLink]="['/home']"> <i class="bi bi-chevron-left pe-1 text-white"></i></a>
+      </li>
+    </ul>
+    <div class="d-flex flex-row-reverse ms-3">
+      <dx-button icon="preferences" text="Filter" (onClick)="togglePopup()">
+      </dx-button>
+
+      <dx-popup [(visible)]="isPopupVisible" [hideOnOutsideClick]="true" [shading]="false" [showTitle]="true"
+        title="Filter" [height]="200" [resizeEnabled]="true" [width]="400">
+        <div>
+          <div class="mb-1">
+            <label>Date from</label>
+            <dx-date-box #dateFrom [displayFormat]="dateFormat" [(value)]="dateFromFilter" type="date">
+            </dx-date-box>
+          </div>
+
+          <div class="mb-1">
+            <label>Date to</label>
+            <dx-date-box #dateTo [displayFormat]="dateFormat" [(value)]="dateToFilter" type="date">
+            </dx-date-box>
+          </div>
+        </div>
+        <dxi-toolbar-item widget="dxButton" location="after" toolbar="bottom">
+          <dx-button (click)="applyFilter()">Apply</dx-button>
+        </dxi-toolbar-item>
+      </dx-popup>
+    </div>
+  </div>
+</nav>
+
+
+<div class="chart-content" id="map-chart"></div>

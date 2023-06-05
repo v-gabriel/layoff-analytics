@@ -1,0 +1,31 @@
+@import 'bootstrap/scss/bootstrap';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+
+.chart {
+  margin: 40px;
+  padding: 20px;
+  border: 1px solid rgb(110 110 110 / 30%);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  .chart-content {
+    border: 1px solid rgb(110 110 110 / 30%);
+    background: rgb(175 175 175 / 8%);
+    overflow: auto;
+    text-align: center;
+  }
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar {
+  background-color: #353535 !important;
+
+  a {
+    color: rgb(146, 146, 146);
+  }
+}
