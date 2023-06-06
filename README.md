@@ -13,7 +13,7 @@ Layoff analytics and data visualization.
 
 Hosted on [Render](https://dashboard.render.com/) as a static site.
 
-[Website](https://imdb-movie-rating-predictor.azurewebsites.net/)
+[Website](https://layoff-analytics.onrender.com)
 
   
 <br>
