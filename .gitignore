@@ -6,6 +6,9 @@
 # Angular cache
 .angular/
 
+# Build files
+dist/
+
 # User-specific files
 *.rsuser
 *.suo
